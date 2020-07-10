@@ -21,7 +21,7 @@ if(!empty($youtubeURL) && !filter_var($youtubeURL, FILTER_VALIDATE_URL) === fals
         $videoTitle = $videoDownloadLink[0]['title']; 
         $videoQuality = $videoDownloadLink[1]['quality']; 
         $videoFormat = $videoDownloadLink[2]['format']; 
-        $videoFileName = strtolower(str_replace(' ', '_', $videoTitle)).'.'.$videoFormat; 
+        $videoFileName = strtolower(str_replace(' ', '_', $videoTitle)).'.mp4'; 
         $downloadURL = $videoDownloadLink[0]['url']; 
         $fileName = preg_replace('/[^A-Za-z0-9.\_\-]/', '', basename($videoFileName)); 
         
